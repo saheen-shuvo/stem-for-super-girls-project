@@ -10,7 +10,7 @@ const ManageEvents = () => {
 
   // Fetch all events
   useEffect(() => {
-    fetch("http://localhost:5001/events")
+    fetch("https://stem-server.onrender.com/events")
       .then((res) => res.json())
       .then((data) => {
         setEvents(data);
@@ -29,7 +29,7 @@ const ManageEvents = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5001/events/${id}`, {
+        fetch(`https://stem-server.onrender.com/events/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

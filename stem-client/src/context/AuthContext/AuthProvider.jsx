@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser?.email) {
         try {
           const res = await fetch(
-            `http://localhost:5001/users/role/${currentUser.email}`,
+            `https://stem-server.onrender.com/users/role/${currentUser.email}`,
           );
           const data = await res.json();
 

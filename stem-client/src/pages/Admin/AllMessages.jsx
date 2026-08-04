@@ -8,7 +8,7 @@ const AllMessages = () => {
   const [replyText, setReplyText] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:5001/all-messages")
+    fetch("https://stem-server.onrender.com/all-messages")
       .then((res) => res.json())
       .then((data) => {
         setMessages(Array.isArray(data) ? data : []);
@@ -21,14 +21,17 @@ const AllMessages = () => {
     if (!replyText[id]?.trim()) return;
 
     try {
-      const res = await fetch(`http://localhost:5001/messages/${id}/reply`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          reply: replyText[id],
-          adminEmail: "admin",
-        }),
-      });
+      const res = await fetch(
+        `https://stem-server.onrender.com/messages/${id}/reply`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            reply: replyText[id],
+            adminEmail: "admin",
+          }),
+        },
+      );
 
       const data = await res.json();
 

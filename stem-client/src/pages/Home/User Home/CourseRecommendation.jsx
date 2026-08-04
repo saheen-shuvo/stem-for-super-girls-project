@@ -18,7 +18,7 @@ const CourseRecommendation = () => {
   useEffect(() => {
     const loadCourses = async () => {
       try {
-        const res = await fetch("http://localhost:5001/courses");
+        const res = await fetch("https://stem-server.onrender.com/courses");
 
         if (!res.ok) {
           throw new Error("Failed to fetch courses");

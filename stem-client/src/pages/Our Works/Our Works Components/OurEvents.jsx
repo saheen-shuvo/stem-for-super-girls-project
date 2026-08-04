@@ -6,7 +6,7 @@ const OurEvents = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/events")
+    fetch("https://stem-server.onrender.com/events")
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);

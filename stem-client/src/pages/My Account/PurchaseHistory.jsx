@@ -18,7 +18,7 @@ const PurchaseHistory = () => {
         }
 
         const response = await fetch(
-          `http://localhost:5001/my-enrolled-courses?email=${userEmail}`,
+          `https://stem-server.onrender.com/my-enrolled-courses?email=${userEmail}`,
         );
         const data = await response.json();
         setCourses(data);

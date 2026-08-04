@@ -37,7 +37,7 @@ const AddEvents = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5001/events", {
+      const res = await fetch("https://stem-server.onrender.com/events", {
         method: "POST",
         headers: {
           "content-type": "application/json",

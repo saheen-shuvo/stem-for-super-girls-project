@@ -13,7 +13,7 @@ const Messages = () => {
     if (!user?.email) return;
     try {
       const res = await fetch(
-        `http://localhost:5001/messages?email=${user.email}`,
+        `https://stem-server.onrender.com/messages?email=${user.email}`,
       );
       const data = await res.json();
       setMessagesList(data);
@@ -42,7 +42,7 @@ const Messages = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5001/messages", {
+      const res = await fetch("https://stem-server.onrender.com/messages", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: user.email, message }),

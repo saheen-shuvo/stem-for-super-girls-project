@@ -8,14 +8,14 @@ const UserHome = () => {
 
   // Fetch latest courses
   useEffect(() => {
-    fetch("http://localhost:5001/courses/latest")
+    fetch("https://stem-server.onrender.com/courses/latest")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
 
   // Fetch upcoming events
   useEffect(() => {
-    fetch("http://localhost:5001/events/upcoming")
+    fetch("https://stem-server.onrender.com/events/upcoming")
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);

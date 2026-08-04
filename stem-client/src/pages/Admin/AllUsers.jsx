@@ -10,7 +10,7 @@ const AllUsers = () => {
 
   // Fetch all users
   useEffect(() => {
-    fetch("http://localhost:5001/users/all")
+    fetch("https://stem-server.onrender.com/users/all")
       .then((res) => res.json())
       .then((data) => {
         setUsers(Array.isArray(data) ? data : []);
@@ -34,7 +34,7 @@ const AllUsers = () => {
       confirmButtonText: "Yes, delete user",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5001/users/${id}`, {
+        fetch(`https://stem-server.onrender.com/users/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

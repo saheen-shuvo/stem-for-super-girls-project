@@ -10,7 +10,7 @@ const ManageCourses = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5001/courses")
+    fetch("https://stem-server.onrender.com/courses")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);
@@ -34,9 +34,12 @@ const ManageCourses = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`http://localhost:5001/courses/${id}`, {
-            method: "DELETE",
-          });
+          const res = await fetch(
+            `https://stem-server.onrender.com/courses/${id}`,
+            {
+              method: "DELETE",
+            },
+          );
 
           const data = await res.json();
 

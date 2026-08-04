@@ -20,7 +20,9 @@ const LogIn = () => {
       await signInUser(email, password);
       toast.success("Logged in successfully");
 
-      const res = await fetch(`http://localhost:5001/users?email=${email}`);
+      const res = await fetch(
+        `https://stem-server.onrender.com/users?email=${email}`,
+      );
       const userData = await res.json();
 
       if (userData?.role === "admin") {

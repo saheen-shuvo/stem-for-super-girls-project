@@ -18,7 +18,7 @@ const CourseDetails = () => {
   const [avgRating, setAvgRating] = useState(0);
 
   useEffect(() => {
-    fetch(`http://localhost:5001/courses/${id}`)
+    fetch(`https://stem-server.onrender.com/courses/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCourse(data);
@@ -30,7 +30,7 @@ const CourseDetails = () => {
   useEffect(() => {
     if (!course?._id) return;
 
-    fetch(`http://localhost:5001/reviews/${course._id}`)
+    fetch(`https://stem-server.onrender.com/reviews/${course._id}`)
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
@@ -51,7 +51,7 @@ const CourseDetails = () => {
       price: course.price,
     };
 
-    fetch("http://localhost:5001/enroll", {
+    fetch("https://stem-server.onrender.com/enroll", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -83,7 +83,7 @@ const CourseDetails = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5001/reviews", {
+      const res = await fetch("https://stem-server.onrender.com/reviews", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(reviewData),

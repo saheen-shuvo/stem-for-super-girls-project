@@ -18,7 +18,7 @@ const AddCourses = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5001/courses", {
+      const res = await fetch("https://stem-server.onrender.com/courses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

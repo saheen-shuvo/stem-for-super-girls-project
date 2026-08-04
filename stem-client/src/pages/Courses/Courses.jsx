@@ -13,7 +13,7 @@ const Courses = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5001/courses")
+    fetch("https://stem-server.onrender.com/courses")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);

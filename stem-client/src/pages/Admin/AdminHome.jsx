@@ -13,10 +13,18 @@ const AdminHome = () => {
     const fetchData = async () => {
       try {
         const [usersRes, coursesRes, enrollRes, eventRes] = await Promise.all([
-          fetch("http://localhost:5001/users/all").then((res) => res.json()),
-          fetch("http://localhost:5001/courses").then((res) => res.json()),
-          fetch("http://localhost:5001/enrollments").then((res) => res.json()),
-          fetch("http://localhost:5001/events").then((res) => res.json()),
+          fetch("https://stem-server.onrender.com/users/all").then((res) =>
+            res.json(),
+          ),
+          fetch("https://stem-server.onrender.com/courses").then((res) =>
+            res.json(),
+          ),
+          fetch("https://stem-server.onrender.com/enrollments").then((res) =>
+            res.json(),
+          ),
+          fetch("https://stem-server.onrender.com/events").then((res) =>
+            res.json(),
+          ),
         ]);
 
         setUsers(usersRes);

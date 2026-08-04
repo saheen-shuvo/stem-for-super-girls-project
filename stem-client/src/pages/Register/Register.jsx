@@ -59,7 +59,7 @@ const Register = () => {
         createdAt: new Date(),
       };
 
-      await fetch("http://localhost:5001/users", {
+      await fetch("https://stem-server.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
