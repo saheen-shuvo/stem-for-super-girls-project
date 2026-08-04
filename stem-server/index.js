@@ -313,7 +313,7 @@ async function run() {
               progress: enroll.progress || 0,
               access: course?.access || "LIFETIME ACCESS",
             };
-          })
+          }),
         );
 
         res.send(coursesWithDetails);
@@ -455,6 +455,51 @@ async function run() {
         });
       } catch (error) {
         res.status(500).send({ message: "Failed to send message" });
+      }
+    });
+
+    //reply to a message
+    // Reply to a message
+    app.patch("/messages/:id/reply", async (req, res) => {
+      try {
+        const { id } = req.params;
+        const { reply, adminEmail } = req.body;
+
+        if (!reply?.trim()) {
+          return res.status(400).send({
+            success: false,
+            message: "Reply is required",
+          });
+        }
+
+        const result = await messagesCollection.updateOne(
+          { _id: new ObjectId(id) },
+          {
+            $set: {
+              reply,
+              adminEmail,
+              repliedAt: new Date(),
+            },
+          },
+        );
+
+        if (result.matchedCount === 0) {
+          return res.status(404).send({
+            success: false,
+            message: "Message not found",
+          });
+        }
+
+        res.send({
+          success: true,
+          message: "Reply saved successfully",
+        });
+      } catch (error) {
+        console.error(error);
+        res.status(500).send({
+          success: false,
+          message: "Failed to save reply",
+        });
       }
     });
 
