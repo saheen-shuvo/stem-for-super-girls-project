@@ -6,6 +6,8 @@ This project showcases a youth-led initiative designed to inspire, educate, and 
 
 ---
 
+<img width="1080" height="1080" alt="1" src="https://github.com/user-attachments/assets/7a7b028c-3e6c-452b-9769-915d51b4e874" />
+
 ## 🌐 Live Demo
 
 - **Frontend:** https://stem-for-super-girls-ad869.web.app/
@@ -40,6 +42,12 @@ The application includes both a public-facing website and a role-based dashboard
 
 ## ✨ Key Features
 
+<img width="1080" height="1080" alt="2" src="https://github.com/user-attachments/assets/b2fe5fdf-42ef-426c-a793-dfb563120814" />
+
+<img width="1080" height="1080" alt="3" src="https://github.com/user-attachments/assets/24c193d4-6db4-4d9b-b253-e00dc16b980b" />
+
+<img width="1080" height="1080" alt="4" src="https://github.com/user-attachments/assets/9ddba181-3c07-409d-b271-161b2e953196" />
+
 ### Public Website
 - Attractive landing page with mission-driven content
 - About Us section
@@ -56,6 +64,8 @@ The application includes both a public-facing website and a role-based dashboard
 - Password reset support
 - Role-based redirection after login
 - User account area with profile, courses, purchase history, and messages
+
+<img width="1080" height="1080" alt="5" src="https://github.com/user-attachments/assets/74609d1f-73b3-4aaa-a28e-240600c7682a" />
 
 ### Admin Dashboard
 - Admin-only dashboard access
