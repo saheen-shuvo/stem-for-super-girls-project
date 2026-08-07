@@ -12,7 +12,8 @@ This project showcases a youth-led initiative designed to inspire, educate, and 
 
 - **Frontend:** https://stem-for-super-girls-ad869.web.app/
 - **Backend API:** https://stem-server.onrender.com
-
+- **Detailed Client Repo:** https://github.com/saheen-shuvo/edTech-client
+- **Detailed Server Repo:** https://github.com/saheen-shuvo/edTech-server
 ---
 
 ## 🔑 Demo Admin Credentials
