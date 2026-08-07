@@ -17,7 +17,7 @@ This project showcases a youth-led initiative designed to inspire, educate, and 
 
 Use these credentials to test the admin dashboard:
 
-- **Email:** `omar@gmail.com`
+- **Email:** `shahneaz@gmail.com`
 - **Password:** `123456`
 
 > Note: These credentials are intended for demo/testing purposes only.
