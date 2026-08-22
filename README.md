@@ -255,11 +255,10 @@ npm run dev
 The backend requires environment variables such as database credentials.
 
 Example:
-```env
+.env
 PORT=5001
 DB_PASS=your_mongodb_password
 DB_USER=your_mongodb_username
-```
 
 The frontend may also require Firebase configuration in its auth setup files.
 
